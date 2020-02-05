@@ -19,13 +19,12 @@ mongoose.connect(
         useUnifiedTopology : true
     },
     () => {
-        console.log("connected");
-        
+        console.log("connected db");   
     }
 
 )
-// app.get('/',(req,res) => res.send('Hello Tuan'))
 
+// app.get('/',(req,res) => res.send('Hello Tuan'))
 const router = require('./routes')
 app.use("/",router)
 app.listen(port,() => console.log(`Server is running on port ${port}`))
